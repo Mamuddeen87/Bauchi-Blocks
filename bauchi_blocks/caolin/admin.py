@@ -1,3 +1,8 @@
 from django.contrib import admin
+from .models import CaolinRecord
 
-# Register your models here.
+class CaolinAdmin(admin.ModelAdmin):
+    list_display = ("picked_by", "date")
+    search_fields = ("date", "picked_by")
+
+admin.site.register(CaolinRecord, CaolinAdmin)
