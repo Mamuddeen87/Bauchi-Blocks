@@ -1,8 +1,9 @@
 from django.urls import path
-from . import views
+from .views import CementDetailView, CementCreateView, CementListView
 from django.contrib.auth import views as auth_views
 
 urlpatterns = [
-        path("/<int:pk>", views.CementDetailView.as_view(), name="cement_record"),
-        path("/new/", views.CementCreateView.as_view(), name="cement_record"),        
+        path("", CementListView.as_view(), name="cement_list"),
+        path("new/", CementCreateView.as_view(), name="cement_new"),        
+        path("<int:pk>", CementDetailView.as_view(), name="cement_record")
         ]
