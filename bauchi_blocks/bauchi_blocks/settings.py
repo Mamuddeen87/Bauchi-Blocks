@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     "expenses",
     "cement",
     "sand",
-    "caolin",
+    "rest_framework"
 ]
 
 MIDDLEWARE = [
