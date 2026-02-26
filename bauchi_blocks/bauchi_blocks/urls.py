@@ -29,9 +29,11 @@ urlpatterns = [
     
 
     path("api/sand/", include("sand.api_urls")),
- #   path("api/cement/", include("cement.api_urls")),
-  #  path("api/expenses/", include("expenses.api_urls")),
-   # path("api/sales/", include("sales.api_urls")),
-    #path("api/production", include("production.api_urls")),
+    path("api/cement/", include("cement.api_urls")),
+    path("api/expenses/", include("expenses.api_urls")),
+    path("api/sales/", include("sales.api_urls")),
+    path("api/customer/", include("sales.api_urls")),
+   path("api/engine/", include("production.api_urls")),
+    path("api/production/", include("production.api_urls")),
     #path("api/user/", include("user.api_urls"))
 ]

@@ -1,12 +1,12 @@
 from .models import Customer, Sale
 from rest_framework import serializers
 
-class CustomerSerializer(serializers.ModelSeralizer):
+class CustomerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Customer
         field = '__all__'
 
-class CustomerSerializer(serializers.ModelSerializer):
+class SalesSerializer(serializers.ModelSerializer):
     class Meta:
         model = Sale
         field = '__all__'

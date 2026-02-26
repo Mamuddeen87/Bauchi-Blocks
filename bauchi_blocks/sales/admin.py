@@ -6,3 +6,4 @@ class CustomerAdmin(admin.ModelAdmin):
     search_fields = ("date", "block_type", "payment_type")
 
 admin.site.register(Sale, CustomerAdmin)
+admin.site.register(Customer)

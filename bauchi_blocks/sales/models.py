@@ -20,7 +20,14 @@ class Sale(models.Model):
     customer = models.ForeignKey(
             Customer,
             on_delete = models.CASCADE)
-    block_type = models
+    BLOCK_CHOICES = [
+            ('Six Inches (6")', 'Six Inches (6")'),
+            ('Nine Inches (9")', 'Nine Inches (9")'),
+            ]
+    block_type = models.CharField(
+            max_length=20,
+            choices=BLOCK_CHOICES
+            )
     quantity = models.PositiveIntegerField()
     unit_price = models.DecimalField(
             max_digits=20, 
@@ -58,4 +65,4 @@ class Sale(models.Model):
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return f"sale to {self.customer.name} on {self.date} at N{self.total_amount}"
+        return f"sale #{self.id}"

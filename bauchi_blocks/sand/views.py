@@ -1,6 +1,12 @@
 from django.shortcuts import render
 from django.views.generic import CreateView, ListView, UpdateView, DeleteView, DetailView
 from .models import SandRecord
+from rest_framework.viewsets import ModelViewSet
+from .serializers import SandRecordSerializer
+
+class SandViewSet(ModelViewSet):
+    queryset = SandRecord.objects.all()
+    serializer_class = SandRecordSerializer
 
 class SandCreate(CreateView):
     model = SandRecord
