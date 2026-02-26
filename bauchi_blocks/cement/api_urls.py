@@ -3,5 +3,5 @@ from .serializers import CementRecordSerializer
 from .views import CementViewSet
 
 router = DefaultRouter()
-router.register(r'cement', CementViewSet, basename="cement")
+router.register(r'', CementViewSet, basename="cement")
 urlpatterns = router.urls

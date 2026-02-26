@@ -4,4 +4,4 @@ from rest_framework import serializers
 class ExpensesSerializers(serializers.ModelSerializer):
     class Meta:
         model = Expenses
-        field = '__all__'
+        fields = '__all__'

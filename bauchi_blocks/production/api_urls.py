@@ -3,9 +3,9 @@ from .serializers import EngineSerializer, ProductionRecordSerializer
 from .views import EngineModelViewSet, ProductionRecordModelViewSet
 
 router = DefaultRouter()
-router.register(r'engine', EngineModelViewSet, basename="engine_router")
+router.register(r'', EngineModelViewSet, basename="engine")
 urlpatterns = router.urls
 
 router = DefaultRouter()
-router.register(r'production', ProductionRecordModelViewSet, basename="production")
+router.register(r'', ProductionRecordModelViewSet, basename="production")
 urlpatterns = router.urls

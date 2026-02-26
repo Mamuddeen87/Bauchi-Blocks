@@ -3,9 +3,9 @@ from .serializers import CustomerSerializer, SalesSerializer
 from .views import CustomerModelViewSet, SalesModelViewSet
 
 router = DefaultRouter()
-router.register(r'customer', CustomerModelViewSet, basename="customer_router")
+router.register(r'', CustomerModelViewSet, basename="customer")
 urlpatterns = router.urls
 
 router = DefaultRouter()
-router.register(r'sales', SalesModelViewSet, basename="sales")
+router.register(r'', SalesModelViewSet, basename="sales")
 urlpatterns = router.urls

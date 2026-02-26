@@ -5,4 +5,4 @@ from django.contrib.auth.models import user
 class ProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = Profile
-        field = '__all__'
+        fields = '__all__'
